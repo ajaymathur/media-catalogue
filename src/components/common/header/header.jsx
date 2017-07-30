@@ -1,11 +1,19 @@
 import React from 'react';
 
-class Header extends React.Component{
-    render() {
-        return (
-            <div>I am header</div>
-        )
-    }
-}
+import './header.css';
 
-export default Header;
+export const Header = () => (
+  <header>
+    <div>
+      <h1>DEMO Streaming</h1>
+    </div>
+    <div>
+      <button className="header-button-login">
+        Log in
+      </button>
+      <button className="header-button-signup">
+        Start your free trial
+      </button>
+    </div>
+  </header>
+)

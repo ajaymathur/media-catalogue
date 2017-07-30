@@ -1,0 +1,11 @@
+.series{
+    padding: 50px 30px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+@media only screen and (min-width: 580px) {
+    .series{
+        padding: 50px 100px;
+    }
+}

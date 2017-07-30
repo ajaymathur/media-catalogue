@@ -1,0 +1,6 @@
+.movies{
+    padding: 50px 100px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+}

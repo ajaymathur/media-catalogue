@@ -1,0 +1,20 @@
+.display-card-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.display-card-container + .display-card-container {
+    margin-left: 10px;
+}
+.display-card-container .display-card img{
+    width: 100%;
+}
+@media only screen and (min-width: 580px) {
+    .display-card-container{
+        width: 200px;
+    }
+    .display-card-container .display-card img{
+        width: 200px;
+    }
+}

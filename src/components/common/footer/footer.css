@@ -1,7 +1,10 @@
 .footer{
     background: #1e1e1e;
     color: silver;
-    padding: 30px 40px;
+    padding: 30px 100px;
+}
+.footer-quick-links.inline-list{
+    display: none;
 }
 .inline-list{
     list-style: none;
@@ -44,3 +47,8 @@ ul.footer-get-app-list li + li{
     margin-left: 15px;
 }
 
+@media only screen and (min-width: 980px) {
+    .footer-quick-links.inline-list{
+        display: block;
+    }
+}

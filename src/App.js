@@ -2,12 +2,13 @@ import React, {Component} from 'react';
 import './App.css';
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
 
 import {Header} from './components/common/header';
+import {Chrome} from './components/common/chrome';
 import {Footer} from './components/common/footer';
 
 import {Home} from './components/pages/home';
@@ -19,13 +20,12 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Link to="/">Home</Link>
-          <Header/>
-          <Route exact path="/" component={Home}/>
-          <Route path="/Movies" component={Movies}/>
-          <Route path="/Series" component={Series}/>
-          <Footer/>
-
+          <Header />
+          <Chrome />
+          <Route exact path="/" component={Home} />
+          <Route path="/Movies" component={Movies} />
+          <Route path="/Series" component={Series} />
+          <Footer />
         </div>
       </Router>
     );
