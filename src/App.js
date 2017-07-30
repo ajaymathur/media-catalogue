@@ -3,8 +3,7 @@ import './App.css';
 
 import {
   HashRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
 
 import {Header} from './components/common/header';

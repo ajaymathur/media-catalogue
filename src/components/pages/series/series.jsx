@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {DisplayCard} from '../../common/display-cards/display-cards';
+import {Error} from '../../common/error/error';
 
 import filter from 'lodash/filter';
 import sortBy from 'lodash/sortBy';
@@ -11,7 +12,9 @@ class Series extends React.Component {
   constructor() {
     super();
     this.state = {
-      series: []
+      series: [],
+      error: false,
+      loading: true
     };
   }
 
@@ -30,8 +33,15 @@ class Series extends React.Component {
           ),
         0, 21);
         this.setState({
-          series: seriesEligible
+          series: seriesEligible,
+          loading: false
         });
+      })
+      .catch(() => {
+        this.setState({
+          error: true,
+          loading: false
+        })
       });
   }
 
@@ -41,7 +51,12 @@ class Series extends React.Component {
     return (
       <div className="series">
         {
-          this.state.series.map(data => <DisplayCard cardDetail={data}/>)
+          this.state.error &&
+          <Error />
+        }
+        {
+          !this.state.error &&
+          this.state.series.map(data => <DisplayCard key={data.title} cardDetail={data} loading={this.state.loading}/>)
         }
       </div>
     )

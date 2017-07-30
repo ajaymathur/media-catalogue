@@ -28,7 +28,7 @@ header div{
 header div h1{
     margin: 0;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 796px) {
     header {
         padding: 15px 100px;
     }

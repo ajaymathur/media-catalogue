@@ -1,8 +1,19 @@
 .chrome{
-    padding: 15px 100px;
+    padding: 15px;
     background-color: #414141;
     color: #f6faf9;
 }
 .chrome h2{
     margin: 0;
+    text-align: center;
+}
+@media only screen and (min-width: 796px) {
+    .chrome{
+        padding: 15px 100px;
+    }
+}
+@media only screen and (min-width: 580px) {
+    .chrome h2 {
+        text-align: left;
+    }
 }

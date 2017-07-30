@@ -1,6 +1,5 @@
 import React from 'react';
 
-import {SOCIAL_LINKS} from '../footer.constants';
 import facebook from './assets/facebook.svg';
 import twitter from './assets/twitter.svg';
 import instagram from './assets/instagram.svg'

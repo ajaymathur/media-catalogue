@@ -2,6 +2,7 @@
   "name": "media-catalogue",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://ajaymathur.github.io/media-catalogue",
   "dependencies": {
     "autoprefixer": "7.1.1",
     "babel-core": "6.25.0",
@@ -47,7 +48,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -91,6 +94,7 @@
   },
   "devDependencies": {
     "enzyme": "^2.9.1",
+    "gh-pages": "^1.0.0",
     "react-test-renderer": "^15.6.1"
   }
 }

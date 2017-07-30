@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {DisplayCard} from '../../common/display-cards/display-cards';
+import {Error} from '../../common/error/error';
 
 import filter from 'lodash/filter';
 import sortBy from 'lodash/sortBy';
@@ -11,7 +12,9 @@ class Movies extends React.Component {
   constructor() {
     super();
     this.state = {
-      movies: []
+      movies: [],
+      error: false,
+      loading: true
     };
   }
 
@@ -30,7 +33,14 @@ class Movies extends React.Component {
           ),
           0, 21);
         this.setState({
-          movies: moviesEligible
+          movies: moviesEligible,
+          loading: false
+        });
+      })
+      .catch(() => {
+        this.setState({
+          error: true,
+          loading: false
         });
       });
   }
@@ -39,7 +49,12 @@ class Movies extends React.Component {
     return (
       <div className="movies">
         {
-          this.state.movies.map(data => <DisplayCard cardDetail={data}/>)
+          this.state.error &&
+          <Error />
+        }
+        {
+          !this.state.error &&
+          this.state.movies.map(data => <DisplayCard cardDetail={data} loading={this.state.loading}/>)
         }
       </div>
     )
