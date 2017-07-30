@@ -1,7 +1,7 @@
 .home-section{
     display: flex;
     margin: 50px 15px;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 .home-section-links{
     text-decoration: none;
@@ -14,7 +14,7 @@
 }
 .catagory-card{
     height: 200px;
-    width: 180px;
+    width: 150px;
     background-color: #1e1e1e;
     color: #f8fbf8;
     margin: auto;

@@ -54,7 +54,7 @@ class Movies extends React.Component {
         }
         {
           !this.state.error &&
-          this.state.movies.map(data => <DisplayCard cardDetail={data} loading={this.state.loading}/>)
+          this.state.movies.map(data => <DisplayCard key={data.title} cardDetail={data} loading={this.state.loading}/>)
         }
       </div>
     )
