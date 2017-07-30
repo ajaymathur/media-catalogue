@@ -1,6 +1,11 @@
 .movies{
-    padding: 50px 100px;
+    padding: 50px 15px;
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;
+}
+@media only screen and (min-width: 796px) {
+    .movies{
+        padding: 50px 100px;
+    }
 }
