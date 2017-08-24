@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import Routes from './routes';
 
 import {createStore, applyMiddleware } from 'redux';
@@ -20,9 +20,9 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <BrowserRouter>
+        <HashRouter>
           <Routes />
-        </BrowserRouter>
+        </HashRouter>
       </Provider>
     );
   }
