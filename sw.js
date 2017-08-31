@@ -2,15 +2,15 @@ var cacheName = 'media-catalogue-v1';
 
 var filesToCache = [
     '.',
-    'media-catalogue/index.html',
-    'media-catalogue/static/js/bundle.js',
-    'media-catalogue/static/css/main.css',
-    'media-catalogue/static/media/app-store.svg',
-    'media-catalogue/static/media/facebook.svg',
-    'media-catalogue/static/media/instagram.svg',
-    'media-catalogue/static/media/play-store.svg',
-    'media-catalogue/static/media/twitter.svg',
-    'media-catalogue/static/media/windows-store.svg',
+    '/media-catalogue/index.html',
+    '/media-catalogue/static/js/main.js',
+    '/media-catalogue/static/css/main.css',
+    '/media-catalogue/static/media/app-store.svg',
+    '/media-catalogue/static/media/facebook.svg',
+    '/media-catalogue/static/media/instagram.svg',
+    '/media-catalogue/static/media/play-store.svg',
+    '/media-catalogue/static/media/twitter.svg',
+    '/media-catalogue/static/media/windows-store.svg',
 ];
 
 self.addEventListener('install', function(event) {
