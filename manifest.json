@@ -1,11 +1,11 @@
 {
   "name": "Media Catalogue",
-  "short_name": "Media",
+  "short_name": "MediaCat",
   "theme_color": "#0064ff",
   "background_color": "#2196f3",
   "display": "fullscreen",
-  "Scope": "/",
-  "start_url": "/index.html",
+  "Scope": "/media-catalogue/",
+  "start_url": "/media-catalogue/index.html",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
